@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="2"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=4;x=1244;y=964"/>
+      <property name="size" type="uint" value="32"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="16"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="2"/>
+      </property>
+      <property name="mode" type="uint" value="0"/>
+      <property name="disable-struts" type="bool" value="true"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="leave-opacity" type="uint" value="33"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="background-style" type="uint" value="0"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-16" type="string" value="actions">
+      <property name="button-title" type="uint" value="3"/>
+      <property name="custom-title" type="string" value="Log Out"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+      <property name="ask-confirmation" type="bool" value="false"/>
+      <property name="appearance" type="uint" value="0"/>
+      <property name="invert-orientation" type="bool" value="false"/>
+    </property>
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="grouping" type="uint" value="1"/>
+      <property name="show-only-minimized" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="true"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="false"/>
+    </property>
+    <property name="plugin-4" type="string" value="directorymenu">
+      <property name="base-directory" type="string" value="/home/ghuser/Workspace"/>
+      <property name="new-folder" type="bool" value="false"/>
+      <property name="new-document" type="bool" value="false"/>
+    </property>
+    <property name="plugin-5" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17306765011.desktop"/>
+        <value type="string" value="17306804393.desktop"/>
+        <value type="string" value="17306804534.desktop"/>
+        <value type="string" value="17306804705.desktop"/>
+        <value type="string" value="17306804756.desktop"/>
+      </property>
+    </property>
+  </property>
+</channel>

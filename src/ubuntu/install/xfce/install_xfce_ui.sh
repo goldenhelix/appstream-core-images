@@ -224,16 +224,17 @@ if [[ "${DISTRO}" != @(centos|oracle7|oracle8|fedora37|fedora38|fedora39|fedora4
 fi
 
 # Override default login script so users cant log themselves out of the desktop dession
-cat >/usr/bin/xfce4-session-logout <<EOL
-#!/usr/bin/env bash
-notify-send "Logout" "Please logout or destroy this desktop using the Kasm Control Panel" -i /usr/share/icons/ubuntu-mono-dark/actions/22/system-shutdown-panel-restart.svg
-EOL
+# *GH*: We want to allow logout, as the user can use logout to end session
+#cat >/usr/bin/xfce4-session-logout <<EOL
+##!/usr/bin/env bash
+#notify-send "Logout" "Please logout or destroy this desktop using the Kasm Control Panel" -i /usr/share/icons/ubuntu-mono-dark/actions/22/system-shutdown-panel-restart.svg
+#EOL
 
 # Add a script for launching Thunar with libnss wrapper.
 # This is called by ~.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 cat >/usr/bin/execThunar.sh <<EOL
 #!/bin/sh
-. $STARTUPDIR/generate_container_user
+# . $STARTUPDIR/generate_container_user
 /usr/bin/Thunar --daemon
 EOL
 chmod +x /usr/bin/execThunar.sh
@@ -256,12 +257,3 @@ cat >>/etc/xdg/Thunar/accels.scm<<EOL
 (gtk_accel_path "<Actions>/ThunarLauncher/trash-delete-2" "")
 (gtk_accel_path "<Actions>/ThunarLauncher/trash-delete" "")
 EOL
-
-# Support desktop icon trust
-cat >>/etc/xdg/autostart/desktop-icons.desktop<<EOL
-[Desktop Entry]
-Type=Application
-Name=Desktop Icon Trust
-Exec=/dockerstartup/trustdesktop.sh
-EOL
-chmod +x /etc/xdg/autostart/desktop-icons.desktop

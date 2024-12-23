@@ -34,7 +34,7 @@ else
   apt-get update
   # Update tzdata noninteractive (otherwise our script is hung on user input later).
   DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-  apt-get install ${PARROTEXTRA} -y vim wget net-tools locales bzip2 wmctrl software-properties-common mesa-utils bc
+  apt-get install ${PARROTEXTRA} -y vim wget curl nano net-tools locales bzip2 wmctrl software-properties-common mesa-utils bc
 
   echo "generate locales for en_US.UTF-8"
   locale-gen en_US.UTF-8
