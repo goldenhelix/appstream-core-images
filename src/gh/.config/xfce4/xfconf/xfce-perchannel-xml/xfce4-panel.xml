@@ -6,7 +6,7 @@
     <value type="int" value="2"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-2" type="empty">
-      <property name="position" type="string" value="p=4;x=1244;y=964"/>
+      <property name="position" type="string" value="p=12;x=1419;y=999"/>
       <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="16"/>
@@ -17,7 +17,7 @@
       <property name="mode" type="uint" value="0"/>
       <property name="disable-struts" type="bool" value="true"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="1"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="leave-opacity" type="uint" value="33"/>
       <property name="icon-size" type="uint" value="0"/>
@@ -62,7 +62,7 @@
     </property>
     <property name="plugin-5" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="17306765011.desktop"/>
+         <value type="string" value="17306765011.desktop"/>
         <value type="string" value="17306804393.desktop"/>
         <value type="string" value="17306804534.desktop"/>
         <value type="string" value="17306804705.desktop"/>

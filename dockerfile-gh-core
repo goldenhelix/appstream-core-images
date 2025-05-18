@@ -72,6 +72,15 @@ COPY ./src/common/install/kasm_vnc/kasmvnc.yaml /etc/kasmvnc/
 ### Install Printer and Network packages
 RUN apt-get install -y cups cups-client cups-pdf dbus iproute2 iptables
 
+### Install mousepad text editor (better than vim)
+RUN apt-get install -y mousepad && \
+    mkdir -p $HOME/.local/share/applications/ && \
+    echo '[Default Applications]' > $HOME/.local/share/applications/mimeapps.list && \
+    echo 'text/plain=mousepad.desktop' >> $HOME/.local/share/applications/mimeapps.list && \
+    echo '' >> $HOME/.local/share/applications/mimeapps.list && \
+    echo '[Added Associations]' >> $HOME/.local/share/applications/mimeapps.list && \
+    echo 'text/plain=mousepad.desktop;' >> $HOME/.local/share/applications/mimeapps.list
+
 ### Install custom cursors
 COPY ./src/ubuntu/install/cursors $INST_SCRIPTS/cursors/
 RUN bash $INST_SCRIPTS/cursors/install_cursors.sh && rm -rf $INST_SCRIPTS/cursors/
